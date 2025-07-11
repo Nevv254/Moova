@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moova | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 min-h-screen">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-pink-600">Moova</h1>
+      <nav class="sticky top-0 hidden md:flex space-x-6 font-medium">
+        <a href="index.html" class="hover:text-pink-600 transition">Home</a>
+        <a href="lisitings.html" class="hover:text-pink-600 transition">lisitings</a>
+        <a href="register.html" class="hover:text-pink-600 transition">Register</a>
+        <a href="login.html" class="hover:text-pink-600 transition">Login</a>
+        <a href="contact.html" class="hover:text-pink-600 transition">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menu-btn">
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-2 pb-4 px-4 bg-white text-sm">
+      <a href="index.html" class="text-gray-700 hover:text-pink-600">Home</a>
+      <a href="lisitings.html" class="text-gray-700 hover:text-pink-600">lisitings</a>
+      <a href="register.html" class="text-gray-700 hover:text-pink-600">Register</a>
+      <a href="login.html" class="text-gray-700 hover:text-pink-600">Login</a>
+      <a href="contact.html" class="text-gray-700 hover:text-pink-600">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-white text-center px-4 py-20">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Lease It. Drive It. Fly It. Sail It.</h2>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">Moova gives you access to premium cars, ships, and aircraft — all in one place. No limits. Just motion.</p>
+    <a href="register.html"
+      class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200">
+      Get Started
+    </a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="bg-white text-gray-800 py-16 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+      <!-- Cars -->
+      <div class="p-6 shadow-lg rounded-xl hover:shadow-2xl transition duration-300">
+        <img src="Assets\car--v1.png" class="w-16 h-16 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Car Leasing</h3>
+        <p>From everyday drives to exotic rides: lease your perfect car for work, play or vibes.</p>
+      </div>
+      <!-- Planes -->
+      <div class="p-6 shadow-lg rounded-xl hover:shadow-2xl transition duration-300">
+        <img src="Assets\airplane-take-off.png" class="w-16 h-16 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Aircraft Leasing</h3>
+        <p>Take to the skies with our private aircraft leases:for business, luxury or cargo.</p>
+      </div>
+      <!-- Ships -->
+      <div class="p-6 shadow-lg rounded-xl hover:shadow-2xl transition duration-300">
+        <img src="Assets\cruise-ship.png" class="w-16 h-16 mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Ship & Yacht Leasing</h3>
+        <p>Own the ocean, from cargo freights to leisure yachts. We lease it all.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-white text-sm py-6 mt-10 bg-gradient-to-t from-black/20 via-transparent">
+    &copy; 2025 Moova. All rights reserved.
+  </footer>
+
+  <!-- Mobile Nav Script -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
