@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moova | Login</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 min-h-screen flex items-center justify-center font-sans">
+
+<body
+  class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 min-h-screen flex items-center justify-center font-sans">
 
   <div class="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 space-y-6">
     <div class="text-center">
-      <h1 class="text-3xl font-bold text-gray-800 tracking-tight">Welcome Back to <span class="text-pink-600">Moova</span></h1>
+      <h1 class="text-3xl font-bold text-gray-800 tracking-tight">Welcome Back to <span
+          class="text-pink-600">Moova</span></h1>
       <p class="text-gray-500 mt-2 text-sm">Lease your vibe. Land, sea, sky.</p>
     </div>
 
-    <form action="#" method="POST" class="space-y-5">
+    <a href="index.html"
+      class="fixed top-4 left-4 bg-indigo-700 hover:bg-indigo-800 text-white px-3 py-1.5 rounded-full shadow-lg text-sm flex items-center z-50 transition ring-2 ring-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back
+    </a>
+
+
+
+
+    <form id="login-form" class="space-y-5">
       <!-- Email -->
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
@@ -46,9 +62,53 @@
     </form>
 
     <p class="text-center text-sm text-gray-600">Don’t have an account?
-      <a href="#" class="text-pink-600 font-semibold hover:underline">Sign up</a>
+      <a href="register.html" class="text-pink-600 font-semibold hover:underline">Sign up</a>
+    </p>
+
+    <p id="login-success" class="text-green-600 font-semibold text-center mt-4 hidden">
+      ✅ Login successful! Redirecting...
+    </p>
+    <p id="login-error" class="text-red-600 font-semibold text-center mt-4 hidden">
+      ❌ Invalid email or password. Try again.
     </p>
   </div>
 
+  <script>
+    const loginForm = document.getElementById('login-form');
+    const loginSuccess = document.getElementById('login-success');
+    const loginError = document.getElementById('login-error');
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get input values
+      const email = loginForm.querySelector('input[name="email"]').value;
+      const password = loginForm.querySelector('input[name="password"]').value;
+
+      // Retrieve saved user
+      const savedUser = JSON.parse(localStorage.getItem('moovaUser'));
+
+      // Validate
+      if (savedUser && savedUser.email === email && savedUser.password === password) {
+        loginSuccess.classList.remove('hidden');
+        loginError.classList.add('hidden');
+
+        setTimeout(() => {
+          loginSuccess.classList.add('hidden'); // hide message before redirect
+          window.location.href = "lisitings.html";
+        }, 1500);
+      } else {
+        loginError.classList.remove('hidden');
+        loginSuccess.classList.add('hidden');
+      }
+      // Redirect after 3.5 seconds
+      setTimeout(() => {
+        successMessage.classList.add('hidden'); // Optional: clear message
+        window.location.href = "lisitings.html";
+      }, 3500);
+    });
+  </script>
+
 </body>
+
 </html>

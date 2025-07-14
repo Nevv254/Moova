@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "type": "Car",
+    "name": "Range Rover Evoque",
+    "image": "assets/rover.jpg",
+    "dailyRate": 8500,
+    "rating": 4.5,
+    "reviews": 42
+  },
+  {
+    "id": 2,
+    "type": "Plane",
+    "name": "Cessna 172 Skyhawk",
+    "image": "assets/cessna.jpg",
+    "dailyRate": 40000,
+    "rating": 4.8,
+    "reviews": 18
+  },
+  {
+    "id": 3,
+    "type": "Ship",
+    "name": "Yacht Ocean X",
+    "image": "assets/yacht.jpg",
+    "dailyRate": 120000,
+    "rating": 5,
+    "reviews": 25
+  }
+]

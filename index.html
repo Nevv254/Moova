@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Moova | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="font-sans text-gray-800 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 min-h-screen">
 
   <!-- Navbar -->
@@ -13,17 +15,16 @@
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-pink-600">Moova</h1>
       <nav class="sticky top-0 hidden md:flex space-x-6 font-medium">
-        <a href="index.html" class="hover:text-pink-600 transition">Home</a>
+        <a href="index.html" class="text-pink-600 border-b-2 border-pink-400 transition">Home</a>
         <a href="lisitings.html" class="hover:text-pink-600 transition">lisitings</a>
+        <a href="bookings.html" class="hover:text-pink-600 transition">Bookings</a>
         <a href="register.html" class="hover:text-pink-600 transition">Register</a>
-        <a href="login.html" class="hover:text-pink-600 transition">Login</a>
         <a href="contact.html" class="hover:text-pink-600 transition">Contact</a>
       </nav>
       <div class="md:hidden">
         <button id="menu-btn">
           <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
@@ -31,8 +32,8 @@
     <div id="mobile-menu" class="md:hidden hidden flex flex-col space-y-2 pb-4 px-4 bg-white text-sm">
       <a href="index.html" class="text-gray-700 hover:text-pink-600">Home</a>
       <a href="lisitings.html" class="text-gray-700 hover:text-pink-600">lisitings</a>
+      <a href="bookings.html" class="text-gray-700 hover:text-pink-600">Bookings</a>
       <a href="register.html" class="text-gray-700 hover:text-pink-600">Register</a>
-      <a href="login.html" class="text-gray-700 hover:text-pink-600">Login</a>
       <a href="contact.html" class="text-gray-700 hover:text-pink-600">Contact</a>
     </div>
   </header>
@@ -40,7 +41,8 @@
   <!-- Hero Section -->
   <section class="text-white text-center px-4 py-20">
     <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Lease It. Drive It. Fly It. Sail It.</h2>
-    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">Moova gives you access to premium cars, ships, and aircraft — all in one place. No limits. Just motion.</p>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-6">Moova gives you access to premium cars, ships, and aircraft —
+      all in one place. No limits. Just motion.</p>
     <a href="register.html"
       class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200">
       Get Started
@@ -71,10 +73,85 @@
     </div>
   </section>
 
+  <!-- carousel with customer testimonials -->
+  <section class="bg-white py-16 px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Trusted by Happy Moovers</h2>
+
+    <div class="relative max-w-5xl mx-auto">
+      <div id="carousel" class="overflow-hidden rounded-2xl shadow-lg">
+        <div class="flex transition-transform duration-700" id="carousel-inner">
+          <img src="Assets\Blue-Simple-Dad-Appreciation-Facebook-Post-1200-×-720-px-28-872x547.png"
+            class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+          <img src="Assets\happy-black-woman-sitting-new-car-taking-keys_116547-20546.avif"
+            class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+          <img src="Assets\img_7303.webp" class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+          <img
+            src="Assets\portrait-african-man-car-seller-holding-car-keys-attractive-cheerful-young-african-man-smiling-showing-car-keys-to-portrait-169505666.webp"
+            class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+          <img src="Assets\black-woman-yacht-enjoying-sea-trip_892434-586.avif"
+            class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+          <img src="Assets\testimonial1.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+          <img src="Assets\yacht.jpg" class="w-full h-96 object-cover flex-shrink-0" alt="Happy client">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-100 py-16 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">What Our Clients Say</h2>
+    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <p class="text-sm italic mb-4">"Leasing with Moova was the best decision ever. The car was clean and
+          affordable!"</p>
+        <div class="flex items-center gap-3">
+          <img src="Assets\avatar.jpeg" class="rounded-full w-10 h-10" />
+          <div>
+            <p class="font-semibold">Brian M.</p>
+            <span class="text-xs text-gray-500">Client</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <p class="text-sm italic mb-4">"We leased a yacht for a weekend party. Everything was smooth and professional."
+        </p>
+        <div class="flex items-center gap-3">
+          <img src="Assets\avatar1.jpeg" class="rounded-full w-10 h-10" />
+          <div>
+            <p class="font-semibold">Sandra K.</p>
+            <span class="text-xs text-gray-500">Corporate Client</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <p class="text-sm italic mb-4">"I needed a private jet urgently for work. Moova came through fast!"</p>
+        <div class="flex items-center gap-3">
+          <img src="Assets\avatar2.jpeg" class="rounded-full w-10 h-10" />
+          <div>
+            <p class="font-semibold">Kevin O.</p>
+            <span class="text-xs text-gray-500">Frequent Flier</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- Footer -->
   <footer class="text-center text-white text-sm py-6 mt-10 bg-gradient-to-t from-black/20 via-transparent">
     &copy; 2025 Moova. All rights reserved.
   </footer>
+
+  <!-- carousel js logic -->
+  <script>
+    let index = 0;
+    const carousel = document.getElementById("carousel-inner");
+    const totalSlides = carousel.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  </script>
 
   <!-- Mobile Nav Script -->
   <script>
@@ -86,4 +163,5 @@
   </script>
 
 </body>
+
 </html>
