@@ -109,12 +109,12 @@
       }
     }
 
-    // ✅ Trigger total update when inputs change
+    //  Trigger total update when inputs change
     startDateInput.addEventListener('input', updateTotalPrice);
     endDateInput.addEventListener('input', updateTotalPrice);
     dailyRateInput.addEventListener('input', updateTotalPrice);
 
-    // Optional: Show confirmation on submit
+    //  Show confirmation on submit
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       confirmationMsg.classList.remove('hidden');
