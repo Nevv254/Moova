@@ -3,7 +3,7 @@ A website for an automotive leasing company
 
 ## Website Structure
 
-The website is a multi-page static site, with each major section residing in its own HTMl file.
+The website is a multi-page  site, with each major section residing in its own HTMl file.
 * **`index.html`**: The main landing page(Home).
 * **`bookings.html`**: Provides a form to fill out the lease details.
 * **`lisitings.html`**: Displays the available automotive lisitings that are available for lease.
