@@ -66,7 +66,7 @@
                 <h3 class="text-lg font-semibold mt-2">Range Rover Evoque</h3>
                 <p class="text-sm text-gray-500">Ksh 8,500 / day</p>
                 <a href="bookings.html"
-                    class="mt-4 block text-center bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition">
+                    class="lease-btn block text-center bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition"data-name="Range Rover Evoque" data-rate="Ksh 8,500 / day">
                     Lease Now
                 </a>
 
@@ -80,7 +80,7 @@
                 <h3 class="text-lg font-semibold mt-2">Cessna Citation X</h3>
                 <p class="text-sm text-gray-500">Ksh 500,000 / trip</p>
                 <a href="bookings.html"
-                    class="mt-4 block text-center bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition">
+                    class="lease-btn block text-center bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition"data-name="Cessna Citation X" data-rate="Ksh 500,000 / trip">
                     Lease Now
                 </a>
 
@@ -93,7 +93,7 @@
                 <h3 class="text-lg font-semibold mt-2">Luxury Yacht 65ft</h3>
                 <p class="text-sm text-gray-500">Ksh 150,000 / day</p>
                 <a href="bookings.html"
-                    class="mt-4 block text-center bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition">
+                    class="lease-btn block text-center bg-pink-600 text-white py-2 rounded-xl hover:bg-pink-700 transition"data-name="Luxury Yacht 65ft" data-rate="Ksh 150,000 / trip">
                     Lease Now
                 </a>
 
@@ -142,6 +142,19 @@ document.getElementById('searchInput').addEventListener('input', function () {
     }
   });
 });
+
+// Js logic 
+document.querySelectorAll('.lease-btn').forEach(button => {
+    button.addEventListener('click', function (e) {
+        const name = this.dataset.name;
+        const rate = this.dataset.rate;
+
+        // Save to localStorage
+        localStorage.setItem('selectedVehicle', JSON.stringify({ name, rate }));
+    });
+});
+
+
 
     </script>
 
